@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="api.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="header">
+            <div class="logo-box">
+                <img class="logo" src="nike-4-logo.svg">
+            </div>
+            <div class="category">
+                <ul class="list">
+                    <li><a href="#" id="showNew" class="menu-option">New & Featured</a>
+                        <div id="New">text</div>
+                    </li>
+                    <li><a href="#" class="menu-option">Men</a></li>
+                    <li><a href="#" class="menu-option">Women</a></li>
+                    <li><a href="#" class="menu-option">Kids</a></li>
+                    <li><a href="#" class="menu-option">Accessories</a></li>
+                    <li><a href="#" class="menu-option">Sale</a></li>
+                </ul>
+            </div>
+            <div class="option">
+                <div class="combinate">
+                    <iconify-icon icon="ph:magnifying-glass" class="magnifying" width="20" height="20"></iconify-icon>
+                    <input type="text" placeholder="Search" class="input">
+                </div>
+                <iconify-icon icon="mdi:heart-outline" class="icon" width="24" height="24"></iconify-icon>
+                <iconify-icon icon="solar:cart-outline" class="icon" width="24" height="24"></iconify-icon>
+            </div>
+        </div>
+
+        <!-- <div class="small-box"> -->
+        <div class="column">
+            <button id="sortBy" class="sortBy" onclick="sortByFunction()">Sort By</button>
+            <div class="sorts" id="sorts" style="display:none">
+                <button class="sort-btn" onclick="fetured()">Fetured</button>
+                <button class="sort-btn" onclick="newest()">Newest</button>
+                <button class="sort-btn" onclick="highLow()">Price: High-Low</button>
+                <button class="sort-btn" onclick="lowHigh()">Price: Low-High</button>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div id="output" class="box"></div>
+    <script>
+        function sortByFunction() {
+
+            let x = document.getElementById("sorts");
+            if (x.style.display === "none") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
