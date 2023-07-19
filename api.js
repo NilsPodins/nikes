@@ -1,40 +1,40 @@
 fetch('https://fakestoreapi.com/products')
-.then(response => response.json())
-.then(data => {
+    .then(response => response.json())
+    .then(data => {
 
-    // Access the data and do something with it
-    console.log(data);
-    // Display the data on the screen
-    displayData(data);
-})
-.catch(error => {
-    console.log('Error:', error);
-});
+        // Access the data and do something with it
+        console.log(data);
+        // Display the data on the screen
+        displayData(data);
+    })
+    .catch(error => {
+        console.log('Error:', error);
+    });
 
 
 function displayData(data) {
-// Assuming you have an element with the id "output" to display the data
-const outputElement = document.getElementById('output');
+    // Assuming you have an element with the id "output" to display the data
+    const outputElement = document.getElementById('output');
 
-// Clear the output element
-outputElement.innerHTML = '';
+    // Clear the output element
+    outputElement.innerHTML = '';
 
-// Iterate through the data and create HTML elements to display the information
-data.forEach(product => {
-    const productElement = document.createElement('div');
-    productElement.classList.add('items');
-    productElement.innerHTML = `
+    // Iterate through the data and create HTML elements to display the information
+    data.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('items');
+        productElement.innerHTML = `
     <img class="img" src="${product.image}">
 <div class='img-box'>
 <p class="title">${product.title}</p>
 <p class="price">$${product.price}</p>
 </div>
 `;
-    outputElement.appendChild(productElement);
-});
+        outputElement.appendChild(productElement);
+    });
 }
 
-function fetured() {
+function featured() {
     fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(data => {
@@ -61,12 +61,12 @@ function fetured() {
             const productElement = document.createElement('div');
             productElement.classList.add('items');
             productElement.innerHTML = `
-            <img class="img" src="${product.image}">
-        <div class='img-box'>
-        <p class="title">${product.title}</p>
-        <p class="price">$${product.price}</p>
-        </div>
-    `;
+    <img class="img" src="${product.image}">
+<div class='img-box'>
+<p class="title">${product.title}</p>
+<p class="price">$${product.price}</p>
+</div>
+`;
             outputElement.appendChild(productElement);
         });
     }
@@ -93,7 +93,7 @@ function newest() {
 
         // Clear the output element
         outputElement.innerHTML = '';
-        const sortedData = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        const sortedData = data.sort((a, b) => b.id - a.id);
 
         // Iterate through the data and create HTML elements to display the information
         data.forEach(product => {
@@ -132,7 +132,8 @@ function lowHigh() {
 
         // Clear the output element
         outputElement.innerHTML = '';
-        
+
+        const sortedData = data.sort((a, b) => a.price - b.price);
         // Iterate through the data and create HTML elements to display the information
         data.forEach(product => {
             const productElement = document.createElement('div');

@@ -19,11 +19,14 @@ body {
 
 .items {
     flex: 0 0 calc(33.33% - 10px);
-    margin: 5px;
+    height: 647px;
+    padding-left: 8px;
+    padding-right: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .img-box {
@@ -32,13 +35,13 @@ body {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    padding-left: 15px;
 }
 
 .img {
     display: flex;
     height: 428px;
     width: 428px;
+    margin-bottom: 20px;
 }
 
 .header {
@@ -54,7 +57,7 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: 10px;
+    gap: 19px;
     font-size: 20px;
 }
 
@@ -105,6 +108,10 @@ body {
     align-items: center;
 }
 
+.c-black {
+    color: black;
+}
+
 .magnifying {
     position: absolute;
     border-radius: 50%;
@@ -113,6 +120,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    color: black;
 }
 
 .magnifying:hover {
@@ -126,6 +135,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .icon:hover {
@@ -139,28 +149,76 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: white;
 }
 
-#New {
+#New,
+#Men,
+#Women,
+#Kids,
+#Accessories,
+#Sale {
     display: none;
     position: absolute;
+    padding-top: 40px;
+    width: 100%;
+    height: 65vh;
 }
 
-#showNew:hover {
-    padding-bottom: 10px;
+.menu-option:hover {
     border-bottom: 2px solid black;
 }
 
 #showNew:hover+#New,
 #New:hover {
-    display: block;
+    display: inline;
     position: absolute;
     right: 0;
     background-color: white;
-    width: 100%;
-    height: 30vh;
-    margin-top: 20px;
-    text-align: center;
+}
+
+#showMen:hover+#Men,
+#Men:hover {
+    display: inline;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+#showWomen:hover+#Women,
+#Women:hover {
+    display: inline;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+#showKids:hover+#Kids,
+#Kids:hover {
+    display: inline;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+#showAccessories:hover+#Accessories,
+#Accessories:hover {
+    display: inline;
+    position: absolute;
+    right: 0;
+    background-color: white;
+}
+
+#showSale:hover+#Sale,
+#Sale:hover {
+    display: inline;
+    position: absolute;
+    right: 0;
+    background-color: white;
 }
 
 .sortBy {
@@ -205,3 +263,34 @@ body {
     justify-content: flex-end;
     width: 100%;
 } */
+
+.cat {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.under-cat {
+    text-decoration: none;
+    color: rgb(145, 145, 145);
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.margin-b {
+    margin-bottom: 50px;
+}
+
+.gap {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
