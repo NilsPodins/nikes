@@ -389,18 +389,20 @@
 }
 
 .information {
-    margin-left: 10vh;
+    padding-left: 10vh;
     margin-top: 50px;
+    width: 100%;
+    height: 75%;
 }
 
 .info-col {
     display: flex;
     gap: 50px;
-    width: 50%;
+    width: 80vh;
 }
 
 .social {
-    margin-left: 34vh;
+    margin-left: 37vh;
     gap: 10px;
 }
 
