@@ -79,6 +79,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    padding-right: 35px;
 }
 
 .input {
@@ -402,7 +403,7 @@
 }
 
 .social {
-    margin-left: 37vh;
+    margin-left: 75vh;
     gap: 10px;
 }
 
@@ -435,7 +436,7 @@
 .rights {
     margin-left: 10vh;
     margin-top: 50px;
-    margin-right: 45vh;
+    margin-right: 82vh;
 }
 
 .privacy {
@@ -447,4 +448,9 @@
 .align-end {
     display: flex;
     align-items: flex-end;
+}
+
+
+.w-145 {
+    width: 145px;
 }
